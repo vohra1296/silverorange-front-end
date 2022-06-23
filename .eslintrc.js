@@ -57,9 +57,10 @@ const newConfig = Object.assign({}, config, {
     'object-shorthand': 'error',
     'one-var': ['error', 'never'],
     'prefer-const': 'error',
-    radix: 'error',
+    'radix': 'error',
     'use-isnan': 'error',
-    'no-shadow': 'error',
+    'no-unused-vars': 'off',
+    'no-shadow': 'off',
     'no-unused-expressions': 'error',
   }),
   overrides: convertOverridesToArray(config.overrides).map((override) => {
@@ -109,6 +110,7 @@ const newConfig = Object.assign({}, config, {
           '@typescript-eslint/no-empty-interface': 'error',
           '@typescript-eslint/no-misused-new': 'error',
           '@typescript-eslint/no-namespace': 'error',
+          '@@typescript-eslint/no-unused-vars': 'off',
           '@typescript-eslint/triple-slash-reference': [
             'error',
             { types: 'prefer-import' },
